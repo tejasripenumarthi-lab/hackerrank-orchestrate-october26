@@ -23,7 +23,7 @@ cd hackerrank-orchestrate-october26
 
 Start your AI coding tool from the **repository root** so it automatically reads [`AGENTS.md`](./AGENTS.md) and logs your session turns to `log.txt` in the root directory.
 
-Build your solution in `code/main.py`, or use another language and document its setup and run command clearly in your README.
+The solution is implemented in `code/main.js` using Node.js and its standard library. The repository's original Python starter file is empty; Node.js is used so the solution can be run and validated in this workspace without installing additional dependencies.
 
 Your solution must:
 
@@ -31,13 +31,17 @@ Your solution must:
 - Generate one prediction row for every request in `dataset/deletion_requests.csv`
 - Write the final predictions to `output.csv` in the repository root
 
-Run the starter Python entry point with:
+Run the solution from the repository root with Node.js 18 or newer:
 
 ```bash
-python3 code/main.py
+node code/main.js
 ```
 
-The blank template at `dataset/output.csv` is provided as a reference. Your final generated file for submission must be the root-level `output.csv`.
+The command reads participant-facing input files under `dataset/` and writes the final submission file to the repository root as `output.csv`. To run against a different request CSV:
+
+```bash
+node code/main.js --input dataset/sample_deletion_requests.csv --output sample-output.csv
+```
 
 
 ## Dataset
